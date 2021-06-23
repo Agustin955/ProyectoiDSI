@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->integer('estado')->default(1);
         });
     }
 
@@ -34,3 +35,4 @@ class CreateUsersTable extends Migration
         Schema::dropIfExists('users');
     }
 }
+
