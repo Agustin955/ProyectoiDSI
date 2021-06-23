@@ -3,7 +3,7 @@
 @section('content')
 
 <h1>Crear nuevo usuario</h1>
-
+ 
 <form method="POST" action="/users" enctype="multipart/form-data">
     {{ csrf_field() }}
     
