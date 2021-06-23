@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
@@ -14,7 +15,10 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return " prueba";
+        $users = User::orderBy('id', 'asc')->where('estado',1)->get();
+
+
+        return view('admin.users.index', compact('users'));
     }
 
     /**
@@ -24,7 +28,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.users.create');
     }
 
     /**
@@ -35,7 +39,14 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User;
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        return redirect('/users');
+
     }
 
     /**
@@ -46,7 +57,7 @@ class UsersController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return view('admin.users.show', ['user'=>$user]);
     }
 
     /**
@@ -57,7 +68,7 @@ class UsersController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view('admin.users.edit', ['user'=>$user]);
     }
 
     /**
@@ -69,7 +80,17 @@ class UsersController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $user->name = $request->name;
+        $user->email = $request->email;
+
+        if($request->password != null){
+
+            $user->password = Hash::make($request->password);
+        }
+        $user->save();
+
+        return redirect('/users');
+        
     }
 
     /**
@@ -80,6 +101,7 @@ class UsersController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        User::where('id', '=' ,$user->id)->update(['estado' => 0]);
+        return redirect('/users');
     }
 }
