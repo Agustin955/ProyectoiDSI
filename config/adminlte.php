@@ -259,7 +259,7 @@ return [
         //     'label'       => 4,
         //     'label_color' => 'success',
         // ],
-        ['header' => 'OPCIONES'],
+        ['header' => 'ADMINISTRADOR'],
         [
             'text' => 'Usuarios',
             'url'  => 'users',
@@ -267,9 +267,10 @@ return [
         ],
         [
             'text' => 'Roles',
-            'url'  => 'admin/settings',
+            'url'  => 'roles',
             'icon' => 'far fa-id-card',
         ],
+        ['header' => 'OPCIONES'],
         [
             'text'    => 'Especies',
             'icon'    => 'far fa-list-alt',
