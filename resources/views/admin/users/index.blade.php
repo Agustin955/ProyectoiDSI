@@ -27,6 +27,8 @@
                         <th>ID</th>
                         <th>Nombre</th>
                         <th>Correo</th>
+                        <th>Role</th>
+                        <th>Permisos</th>
                         <th>Herramientas</th>
                     </tr>
                 </thead>
@@ -38,6 +40,27 @@
                             <th>{{$user->id}}</th>
                             <th>{{$user->name}}</th>
                             <th>{{$user->email}}</th>
+                            <td>
+                                @if ($user->roles->isNotEmpty())
+                                    @foreach ($user->roles as $role)
+                                        <span class="badge badge-secondary">
+                                            {{ $role->name }}
+                                        </span>
+                                    @endforeach
+                                @endif
+        
+                            </td>
+                            <td>
+                                @if ($user->permissions->isNotEmpty())
+                                                
+                                    @foreach ($user->permissions as $permission)
+                                        <span class="badge badge-secondary">
+                                            {{ $permission->name }}                                    
+                                        </span>
+                                    @endforeach
+                                
+                                @endif
+                            </td>
                             <td>
                                 <a href="/users/{{$user['id']}}"><i class="fa fa-eye"></i></a>
                                 <a href="/users/{{$user['id']}}/edit"><i class="fa fa-edit"></i></a>

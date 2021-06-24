@@ -69,7 +69,7 @@ return [
     'usermenu_header_class' => 'bg-primary',
     'usermenu_image' => false,
     'usermenu_desc' => false,
-    'usermenu_profile_url' => true,
+    'usermenu_profile_url' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -259,17 +259,22 @@ return [
         //     'label'       => 4,
         //     'label_color' => 'success',
         // ],
-        ['header' => 'ADMINISTRADOR'],
+        
+        ['header' => 'ADMINISTRADOR','can' => 'isAdmin',],
         [
             'text' => 'Usuarios',
             'url'  => 'users',
             'icon' => 'fas fa-fw fa-user',
+            'can' => 'isAdmin',
         ],
         [
             'text' => 'Roles',
             'url'  => 'roles',
             'icon' => 'far fa-id-card',
+            'can' => 'isAdmin',
         ],
+        
+        
         ['header' => 'OPCIONES'],
         [
             'text'    => 'Especies',

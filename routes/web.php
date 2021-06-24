@@ -21,5 +21,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('users', 'UsersController');
-Route::resource('roles', 'RolesController');
+Route::resource('users', 'UsersController')->middleware('can:isAdmin');
+Route::resource('roles', 'RolesController')->middleware('can:isAdmin');
+
+//Route::resource('users', 'UsersController')->middleware('especies:isAdmin,isOperativo');
+

@@ -2,12 +2,22 @@
 
 @section('title', 'Inicio')
 
+
+
 @section('content_header')
-    <h1>Dashboard</h1>
+    
+    
+        BIENVENIDO
+    
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <div class="content">
+        <div class="title m-b-md">
+            BIENVENIDO
+        </div>
+    </div>
+    <p>Sistema de Tesoreria.</p>
 @stop
 
 @section('css')
