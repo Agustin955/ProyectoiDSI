@@ -11,9 +11,17 @@
             <h4>Slug: {{$role['slug']}}</h4>
         </div>
         <div class="card-body">
-            <h5 class="card-title">Permissions</h5>
+            <h5 class="card-title">Permisos</h5>
             <p class="card-text">
-                ...........
+                @if ($role->permissions->isNotEmpty())
+                                                
+                @foreach ($role->permissions as $permission)
+                    <span class="badge badge-primary">
+                        {{ $permission->name }}                                    
+                    </span>
+                @endforeach
+            
+            @endif
             </p>
         </div>
         <div class="card-footer">

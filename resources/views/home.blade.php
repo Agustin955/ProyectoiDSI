@@ -7,17 +7,17 @@
 @section('content_header')
     
     
-        BIENVENIDO
+
     
 @stop
 
 @section('content')
     <div class="content">
         <div class="title m-b-md">
-            BIENVENIDO
+            BIENVENIDO Al SISTEMA DE TESORERIA
         </div>
     </div>
-    <p>Sistema de Tesoreria.</p>
+    <p>Alcaldia de Soyapango </p>
 @stop
 
 @section('css')
