@@ -24,7 +24,7 @@
             <table class= "table table-striped" id="usuarios">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        
                         <th>Nombre</th>
                         <th>Correo</th>
                         <th>Role</th>
@@ -37,7 +37,7 @@
 
                     @foreach($users as $user)
                         <tr>
-                            <th>{{$user->id}}</th>
+                            
                             <th>{{$user->name}}</th>
                             <th>{{$user->email}}</th>
                             <td>
@@ -59,7 +59,7 @@
                                         </span>
                                     @endforeach
                                 
-                                @endif
+                                @endif 
                             </td>
                             <td>
                                 <a href="/users/{{$user['id']}}"><i class="fa fa-eye"></i></a>

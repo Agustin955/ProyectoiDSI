@@ -45,11 +45,11 @@ class EspecieController extends Controller
     {
         $request->validate([
             'especie_nombre' => 'required|max:255',
-            'especie_costo' => 'required|max:255',
-            'especie_valorVenta' => 'required|max:255',
-            'especie_numeracionInicial' => 'required|max:255',
-            'especie_numeracionFinal' => 'required|max:255',
-            'especie_cantidad' => 'required|max:255'
+            'especie_costo' => 'required|max:255|numeric',
+            'especie_valorVenta' => 'required|max:255|numeric',
+            'especie_numeracionInicial' => 'required|max:255|numeric',
+            'especie_numeracionFinal' => 'required|max:255|numeric',
+            'especie_cantidad' => 'required|numeric'
 
         ]);
 
