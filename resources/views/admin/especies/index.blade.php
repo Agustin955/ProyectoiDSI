@@ -24,7 +24,7 @@
             <table class= "table table-striped" id="usuarios">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                       
                         <th>Nombre</th>
                         <th>Costo</th>
                         <th>Valor de Venta</th>
@@ -39,7 +39,7 @@
 
                     @foreach($especie as $especie)
                         <tr>
-                            <th>{{$especie->id}}</th>
+                            
                             <th>{{$especie->nombre}}</th>
                             <th>{{$especie->costo}}</th>
                             <th>{{$especie->valorVenta}}</th>

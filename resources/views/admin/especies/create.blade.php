@@ -13,23 +13,48 @@
     </div>
     <div class="form-group">
         <label for="costo">Costo</label>
-        <input type="text" name="especie_costo" class="form-control" id="especie_costo" placeholder="Costo..." value="{{ old('especie_costo') }}" required>
+        <input type="text" name="especie_costo" class="form-control @error('especie_costo') is-invalid @enderror" id="especie_costo" placeholder="Costo..." value="{{ old('especie_costo') }}" novalidate>
+        @error('especie_costo')
+            <span class="invalid-feedback d-block" role="alert">
+                <Strong>{{$message}}</Strong>
+            </span>
+        @enderror
     </div>
     <div class="form-group">
         <label for="valorVenta">Valor de venta</label>
-        <input type="text" name="especie_valorVenta" class="form-control" id="especie_valorVenta" placeholder="Valor de Venta..." value="{{ old('especie_valorVenta') }}" required>
+        <input type="text" name="especie_valorVenta" class="form-control @error('especie_costo') is-invalid @enderror" id="especie_valorVenta" placeholder="Valor de Venta..." value="{{ old('especie_valorVenta') }}" novalidate>
+        @error('especie_valorVenta')
+            <span class="invalid-feedback d-block" role="alert">
+                <Strong>{{$message}}</Strong>
+            </span>
+        @enderror
     </div>
     <div class="form-group">
         <label for="NumeracionInicial">Numeración inicial</label>
-        <input type="text" name="especie_numeracionInicial" class="form-control" id="especie_numeracionInicial" placeholder="Numeración inicial..." value="{{ old('especie_numeracionInicial') }}" required>
+        <input type="text" name="especie_numeracionInicial" class="form-control @error('especie_costo') is-invalid @enderror" id="especie_numeracionInicial" placeholder="Numeración inicial..." value="{{ old('especie_numeracionInicial') }}" novalidate>
+        @error('especie_numeracionInicial')
+            <span class="invalid-feedback d-block" role="alert">
+                <Strong>{{$message}}</Strong>
+            </span>
+        @enderror
     </div>
     <div class="form-group">
         <label for="NumeracionFinal">Numeración final</label>
-        <input type="text" name="especie_numeracionFinal" class="form-control" id="especie_numeracionFinal" placeholder="Numeracion Final..." value="{{ old('especie_numeracionFinal') }}" required>
+        <input type="text" name="especie_numeracionFinal" class="form-control @error('especie_costo') is-invalid @enderror" id="especie_numeracionFinal" placeholder="Numeracion Final..." value="{{ old('especie_numeracionFinal') }}" novalidate>
+        @error('especie_numeracionFinal')
+            <span class="invalid-feedback d-block" role="alert">
+                <Strong>{{$message}}</Strong>
+            </span>
+        @enderror
     </div>
     <div class="form-group">
         <label for="cantidad">Cantidad</label>
-        <input type="text" name="especie_cantidad" class="form-control" id="especie_cantidad" placeholder="Cantidad..." value="{{ old('especie_cantidad') }}" required>
+        <input type="text" name="especie_cantidad" class="form-control @error('especie_costo') is-invalid @enderror" id="especie_cantidad" placeholder="Cantidad..." value="{{ old('especie_cantidad') }}" novalidate>
+        @error('especie_cantidad')
+            <span class="invalid-feedback d-block" role="alert">
+                <Strong>{{$message}}</Strong>
+            </span>
+        @enderror
     </div>
        
 

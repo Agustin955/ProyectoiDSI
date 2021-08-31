@@ -27,18 +27,18 @@
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
             <tr>
-                <th>Id</th>
+                
                 <th>Role</th>
-                <th>Slug</th>
-                <th>Permissions</th>
-                <th colspan="3"><center>Tools</center></th>
+                <th>Sub Nombre</th>
+                <th>Permisos</th>
+                <th colspan="3"><center>Herramientas</center></th>
             </tr>
             </thead>
             
             <tbody>
                 @foreach ($roles as $role)
                     <tr>
-                        <td>{{ $role['id'] }}</td>
+                        
                         <td>{{ $role['name'] }}</td>
                         <td>{{ $role['slug'] }}</td>
                         <td>
