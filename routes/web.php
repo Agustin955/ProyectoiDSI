@@ -29,3 +29,6 @@ Route::resource('especie', 'EspecieController')->middleware('especies:isAdmin,is
 
 //Route::resource('users', 'UsersController')->middleware('especies:isAdmin,isOperativo');
 
+// Route::resource('zonas', 'ZonasController', ['onlye' =>['index','create','edit','update','store'] ])->middleware('especies:isAdmin,isOperativo');
+Route::resource('zonas', 'ZonasController')->middleware('can:isAdmin');
+Route::post('/actualizarzona', 'ZonasController@actualizarzona')->name('actualizarzona');
