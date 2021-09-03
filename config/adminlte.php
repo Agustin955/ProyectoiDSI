@@ -281,6 +281,11 @@ return [
             'url'  => 'especie',
             'icon' => 'far fa-id-card',
         ],
+        [
+            'text'    => 'Cobradores',
+            'url'  => 'cobrador',
+            'icon' => 'fas fa-hand-holding-usd',
+        ],
         // ['header' => 'labels'],
         // [
         //     'text'       => 'important',

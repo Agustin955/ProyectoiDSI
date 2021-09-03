@@ -25,6 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('users', 'UsersController')->middleware('can:isAdmin');
 Route::resource('roles', 'RolesController')->middleware('can:isAdmin');
 Route::resource('especie', 'EspecieController')->middleware('especies:isAdmin,isOperativo');
+Route::resource('cobrador', 'CobradorController')->middleware('especies:isAdmin');
 // Route::get('especies/{especies}','EspecieController@show')->name('especies.show');
 
 //Route::resource('users', 'UsersController')->middleware('especies:isAdmin,isOperativo');
