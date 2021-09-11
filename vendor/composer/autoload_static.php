@@ -521,6 +521,7 @@ class ComposerStaticInitb2662e8461f5ffae1193e6d6576b6eee
         'App\\Role' => __DIR__ . '/../..' . '/app/Role.php',
         'App\\Traits\\HasRolesAndPermissions' => __DIR__ . '/../..' . '/app/Traits/HasRolesAndPermissions.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\Venta' => __DIR__ . '/../..' . '/app/Venta.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack/CorsService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',

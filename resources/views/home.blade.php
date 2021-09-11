@@ -1,3 +1,8 @@
+@if (auth()->user()->estado==0)
+    <h4>  "BIENVENIDO No esta registrado" </h4>
+@else
+    
+
 @extends('adminlte::page')
 
 @section('title', 'Inicio')
@@ -5,10 +10,10 @@
 
 
 @section('content_header')
-    
-    
 
-    
+
+
+
 @stop
 
 @section('content')
@@ -27,3 +32,5 @@
 @section('js')
     <script> console.log('Hi!'); </script>
 @stop
+
+@endif

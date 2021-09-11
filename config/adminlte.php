@@ -279,7 +279,14 @@ return [
         [
             'text'    => 'Especies',
             'url'  => 'especie',
-            'icon' => 'far fa-id-card',
+            'icon' => 'fa fa-book-open',
+            
+        ],
+        [
+            'text'    => 'Venta',
+            'url'  => 'venta',
+            'icon' => 'fa fa-dollar-sign',
+            
         ],
         // ['header' => 'labels'],
         // [

@@ -14,22 +14,22 @@
             @endforeach
         </ul>
     </div>
-@endif
+@endif 
 
 <form method="POST" action="/roles">
     {{ csrf_field() }}
     
     <div class="form-group">
         <label for="role_name">Nombre Role </label>
-        <input type="text" name="role_name" class="form-control" id="role_name" placeholder="Role name..." value="{{ old('role_name') }}" >
+        <input type="text" name="role_name" class="form-control" id="role_name" placeholder="Role name..." value="{{ old('role_name') }}"required >
     </div>
     <div class="form-group">
         <label for="role_slug">Role Slug</label>
-        <input type="text" name="role_slug" tag="role_slug" class="form-control" id="role_slug" placeholder="Role Slug..." value="{{ old('role_slug') }}">
+        <input type="text" name="role_slug" tag="role_slug" class="form-control" id="role_slug" placeholder="Role Slug..." value="{{ old('role_slug') }}"required>
     </div>
     <div class="form-group" >
         <label for="role_permissions">Agregar Permisos</label>
-        <input type="text" data-role="tagsinput" name="role_permissions" class="form-control" id="role_permissions" value="{{ old('role_permissions') }}">   
+        <input type="text" data-role="tagsinput" name="role_permissions" class="form-control" id="role_permissions" value="{{ old('role_permissions') }}"required>   
     </div>     
 
     <div class="form-group pt-2">

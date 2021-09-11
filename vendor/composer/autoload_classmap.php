@@ -38,6 +38,7 @@ return array(
     'App\\Role' => $baseDir . '/app/Role.php',
     'App\\Traits\\HasRolesAndPermissions' => $baseDir . '/app/Traits/HasRolesAndPermissions.php',
     'App\\User' => $baseDir . '/app/User.php',
+    'App\\Venta' => $baseDir . '/app/Venta.php',
     'Asm89\\Stack\\Cors' => $vendorDir . '/asm89/stack-cors/src/Asm89/Stack/Cors.php',
     'Asm89\\Stack\\CorsService' => $vendorDir . '/asm89/stack-cors/src/Asm89/Stack/CorsService.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',

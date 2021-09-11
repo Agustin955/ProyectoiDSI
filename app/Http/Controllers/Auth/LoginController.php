@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -28,11 +29,18 @@ class LoginController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
+    protected function credentials(Request $request)
+    {
+    $request['estado'] = 1;
+    return $request->only($this->username(), 'password', 'estado');
+    }
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');

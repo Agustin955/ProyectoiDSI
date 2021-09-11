@@ -29,7 +29,9 @@
                         <th>Correo</th>
                         <th>Role</th>
                         <th>Permisos</th>
-                        <th>Herramientas</th>
+                        <th>Ver</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
                     </tr>
                 </thead>
 
@@ -61,16 +63,17 @@
                                 
                                 @endif 
                             </td>
-                            <td>
-                                <a href="/users/{{$user['id']}}"><i class="fa fa-eye"></i></a>
-                                <a href="/users/{{$user['id']}}/edit"><i class="fa fa-edit"></i></a>
-                                <form action="{{'users/'.$user->id}}" method="post"> 
-                                    @csrf
-                                    {{ method_field('DELETE') }}
-                                    <button  type="submit" class="btn fas fa-trash-alt" onclick="return confirm('¿BORRAR?')"></button>
-                                </form>
+                            
+                            <td><a href="/users/{{$user['id']}}"><i class="fa fa-eye"></i></a></td>
+                            <td><a href="/users/{{$user['id']}}/edit"><i class="fa fa-edit"></i></a></td>
+                            <td><form action="{{'users/'.$user->id}}" method="post"> 
+                                @csrf
+                                {{ method_field('DELETE') }}
+                                <button  type="submit" class="btn fas fa-trash-alt" onclick="return confirm('¿BORRAR?')"></button>
+                            </form> </td>
                                 
-                            </td>
+                                
+                            
                         </tr>
                     @endforeach
                 </tbody>  

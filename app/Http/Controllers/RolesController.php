@@ -107,7 +107,7 @@ class RolesController extends Controller
     {
          //validate the role fields
          $request->validate([
-            'role_name' => 'required|max:255',
+            'role_name' => 'required|string|max:255',
             'role_slug' => 'required|max:255'
         ]);
         

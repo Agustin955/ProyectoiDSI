@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+ 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -25,6 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('users', 'UsersController')->middleware('can:isAdmin');
 Route::resource('roles', 'RolesController')->middleware('can:isAdmin');
 Route::resource('especie', 'EspecieController')->middleware('especies:isAdmin,isOperativo');
+Route::resource('venta', 'VentaController')->middleware('can:isAdmin');
 // Route::get('especies/{especies}','EspecieController@show')->name('especies.show');
 
 //Route::resource('users', 'UsersController')->middleware('especies:isAdmin,isOperativo');

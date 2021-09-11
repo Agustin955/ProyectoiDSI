@@ -31,7 +31,10 @@
                         <th>Numero Inicial</th>
                         <th>Numero Final</th>
                         <th>Cantidad</th>
-                        <th>Herramientas</th>
+                        
+                        <th>Ver</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
                     </tr>
                 </thead>
 
@@ -47,18 +50,19 @@
                             <th>{{$especie->numeracionFinal}}</th>
                             <th>{{$especie->cantidad}}</th>
                             
+                            
 
                             
-                            <td>
-                                <a href="/especie/{{$especie['id']}}"><i class="fa fa-eye"></i></a>
-                                <a href="/especie/{{$especie['id']}}/edit"><i class="fa fa-edit"></i></a>
-                                <form action="{{'especie/'.$especie->id}}" method="post"> 
-                                    @csrf
-                                    {{ method_field('DELETE') }}
-                                    <button  type="submit" class="btn fas fa-trash-alt" onclick="return confirm('¿BORRAR?')"></button>
-                                </form> 
+                            
+                               <td> <a href="/especie/{{$especie['id']}}"><i class="fa fa-eye"></i></a> </td>
+                                <td><a href="/especie/{{$especie['id']}}/edit"><i class="fa fa-edit"></i></a> </td>
+                               <td><form action="{{'especie/'.$especie->id}}" method="post"> 
+                                @csrf
+                                {{ method_field('DELETE') }}
+                                <button  type="submit" class="btn fas fa-trash-alt" onclick="return confirm('¿BORRAR?')"></button>
+                            </form>  </td> 
                                 
-                            </td>
+                            
                         </tr>
                     @endforeach
                 </tbody>  
