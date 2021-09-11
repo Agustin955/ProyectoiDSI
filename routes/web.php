@@ -26,7 +26,12 @@ Route::resource('users', 'UsersController')->middleware('can:isAdmin');
 Route::resource('roles', 'RolesController')->middleware('can:isAdmin');
 Route::resource('especie', 'EspecieController')->middleware('especies:isAdmin,isOperativo');
 Route::resource('venta', 'VentaController')->middleware('can:isAdmin');
+
+Route::resource('cobrador', 'CobradorController')->middleware('especies:isAdmin');
 // Route::get('especies/{especies}','EspecieController@show')->name('especies.show');
 
 //Route::resource('users', 'UsersController')->middleware('especies:isAdmin,isOperativo');
 
+// Route::resource('zonas', 'ZonasController', ['onlye' =>['index','create','edit','update','store'] ])->middleware('especies:isAdmin,isOperativo');
+Route::resource('zonas', 'ZonasController')->middleware('can:isAdmin');
+Route::post('/actualizarzona', 'ZonasController@actualizarzona')->name('actualizarzona');

@@ -288,6 +288,11 @@ return [
             'icon' => 'fa fa-dollar-sign',
             
         ],
+        [
+            'text'    => 'Cobradores',
+            'url'  => 'cobrador',
+            'icon' => 'fas fa-hand-holding-usd',
+        ],
         // ['header' => 'labels'],
         // [
         //     'text'       => 'important',
