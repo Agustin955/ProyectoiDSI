@@ -293,6 +293,11 @@ return [
             'url'  => 'cobrador',
             'icon' => 'fas fa-hand-holding-usd',
         ],
+        [
+            'text'    => 'Zonas',
+            'url'  => 'zonas',
+            'icon' => 'fas fa-suitcase',
+        ],
         // ['header' => 'labels'],
         // [
         //     'text'       => 'important',
