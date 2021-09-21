@@ -47,6 +47,21 @@
         <input type="number" disabled name="precio"  class="form-control" id="precio" placeholder="precio..."value="{{ old('precio') }}" novalidate>
         
     </div>
+    <div class="form-group">
+        <label for="zona">Seleccione Zona</label>
+        <select class="form-control" name="zona" id="zona">
+            <option value="">Seleccione Zona...</option>
+            @foreach ($zonas as $zona)
+            <option value="{{ $zona->id }}" {{old('zona')== $zona->id ? 'selected' : '' }}>{{$zona->nombre}}</option>
+            
+            @endforeach
+        </select>
+        @error('especie')
+            <span class="invalid-feedback d-block" role="alert">
+                <Strong>{{$message}}</Strong>
+            </span>
+        @enderror
+    </div>
     <div class="form-group" >
         <label for="cantidad">Cantidad</label>
         <input type="text"  name="cantidad" class="form-control" id="cantidad" placeholder="Cantidad..." novalidate>

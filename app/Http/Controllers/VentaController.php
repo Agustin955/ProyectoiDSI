@@ -7,6 +7,7 @@ use App\Venta;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Zona;
 
 class VentaController extends Controller
 {
@@ -30,10 +31,12 @@ class VentaController extends Controller
     public function create()
     {
       //  $especies = DB::table('especies')->get()->pluck('nombre','id');
+        //$zonas = DB::table('zonas')->get()->pluck('nombre','id');
 
         $especies=Especie::all(['id','nombre','cantidad','valorVenta']);
+        $zonas=Zona::all(['id','nombre']);
 
-        return view('admin.venta.create')->with('especies',$especies);
+        return view('admin.venta.create')->with('especies',$especies)->with('zonas',$zonas);
     }
 
     /**
@@ -47,6 +50,7 @@ class VentaController extends Controller
         $request->validate([
             'venta_name' => 'required|max:255',
             'especie' => 'required|max:255',
+            'zona' => 'required|max:255',
             'cantidad' => 'required|max:255|numeric',
             'total' => 'required|max:255',
             
@@ -57,6 +61,7 @@ class VentaController extends Controller
 
         $venta->name = $request->venta_name;
         $venta->especie_id = $request->especie[0];
+        $venta->zona_id = $request->zona[0];
         $venta->cantidad = $request->cantidad;
         $venta->total = $request->total;
         // $especie->costo = $request->especie_costo;

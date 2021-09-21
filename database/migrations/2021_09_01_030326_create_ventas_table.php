@@ -17,8 +17,9 @@ class CreateVentasTable extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('especie_id')->references('id')->on('especies');
+            $table->foreignId('zona_id')->references('id')->on('zonas');
             $table->integer('cantidad');
-            $table->integer('total');
+            $table->double('total');
             $table->timestamps();
         });
     }
