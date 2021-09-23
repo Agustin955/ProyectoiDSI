@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Cobradores')
+@section('title', 'Usuarios')
  
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
@@ -10,10 +10,10 @@
 
 <div class="row py-lg-2">
     <div class="col-md-6">
-        <h2>Lista de cobradores</h2>
+        <h2>Lista de embargos</h2>
     </div>
     <div class="col-md-6">
-        <a href="/cobrador/create" class="btn btn-primary btn-lg float-md-right" role="button" aria-pressed="true">Crear nuevo Cobrador</a>
+        <a href="/embargo/create" class="btn btn-primary btn-lg float-md-right" role="button" aria-pressed="true">Crear nuevo Embargo</a>
     </div>
 </div>
 
@@ -29,39 +29,37 @@
                     <tr>
                        
                         <th>Nombre</th>
-                        <th>Sexo</th>
-                        <th>Telefono</th>
-                        <th>Fecha de nacimiento</th>
-                        <th>Correo Electronico</th>
+                        <th>Monto a descontar</th>
+                        <th>Referencia</th>
+                        <th>Estado</th>
                         <th colspan="3"><center>Herramientas</center></th>
                     </tr>
                 </thead>
 
                 <tbody>
 
-                    @foreach($cobrador as $cobrador)
+                    @foreach($embargo as $embargo)
                         <tr>
                             
-                            <th>{{$cobrador->nombre}}</th>
-                            <th>{{$cobrador->sexo}}</th>
-                            <th>{{$cobrador->telefono}}</th>
-                            <th>{{$cobrador->fecha_nacimiento}}</th>
-                            <th>{{$cobrador->correo_electronico}}</th>
+                            <th>{{$embargo->nombre}}</th>
+                            <th>{{$embargo->montoDescontar}}</th>
+                            <th>{{$embargo->referencia}}</th>
+                            <th>{{$embargo->estadoEmbargo}}</th>
                             
                             <td>
-                                <a href="/cobrador/{{$cobrador['id']}}"><i class="fa fa-eye"></i></a>
+                                <a href="/embargo/{{$embargo['id']}}"><i class="fa fa-eye"></i></a>
                             </td>
                             <td>    
-                                <a href="/cobrador/{{$cobrador['id']}}/edit"><i class="fa fa-edit"></i></a>
+                                <a href="/embargo/{{$embargo['id']}}/edit"><i class="fa fa-edit"></i></a>
                             </td>
-                            <td>    
-                                <form action="{{'cobrador/'.$cobrador->id}}" method="post"> 
+                            <!--<td>    
+                                <form action="{{'embargo/'.$embargo->id}}" method="post"> 
                                     @csrf
                                     {{ method_field('DELETE') }}
                                     <button  type="submit" class="btn fas fa-trash-alt" onclick="return confirm('¿BORRAR?')"></button>
                                 </form> 
                                 
-                            </td>
+                            </td>-->
                         </tr>
                     @endforeach
                 </tbody>  

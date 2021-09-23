@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Usuarios')
+@section('title', 'Ventas')
 
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
@@ -28,6 +28,7 @@
                 
                 <th>Nombre Venta</th>
                 <th>Especie</th>
+                <th>Zona</th>
                 <th>Cantidad</th>
                 <th>total</th>
                 <th>fecha</th>
@@ -42,8 +43,9 @@
                         
                         <td>{{ $venta['name'] }}</td>
                         <td>{{ $venta->especie->nombre }}</td>
+                        <td>{{ $venta->zona->nombre }}</td>
                         <td>{{ $venta['cantidad'] }}</td>
-                        <td>{{ $venta['total'] }}</td>
+                        <td>$ {{ $venta['total'] }}</td>
                         <th>{{$venta->created_at->format('d-m-Y')}}</th>
                         
                      

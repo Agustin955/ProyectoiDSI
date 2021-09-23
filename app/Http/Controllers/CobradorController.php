@@ -40,11 +40,11 @@ class CobradorController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'cobrador_nombre' => 'required|max:300',
+            'cobrador_nombre' => 'required|max:500',
             'cobrador_sexo' => 'required|max:300',
             'cobrador_telefono' => 'required|max:300',
             'cobrador_fecha' => 'required|max:300',
-            'cobrador_correo' => 'required|max:300'
+            'cobrador_correo' => 'required|max:500'
 
         ]);
 
@@ -95,11 +95,11 @@ class CobradorController extends Controller
     public function update(Request $request, Cobrador $cobrador)
     {
         $request->validate([
-            'cobrador_nombre' => 'required|max:300',
+            'cobrador_nombre' => 'required|max:500',
             'cobrador_sexo' => 'required|max:300',
             'cobrador_telefono' => 'required|max:300',
             'cobrador_fecha' => 'required|max:300',
-            'cobrador_correo' => 'required|max:300'
+            'cobrador_correo' => 'required|max:500'
 
         ]);
 

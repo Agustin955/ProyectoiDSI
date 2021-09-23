@@ -28,6 +28,7 @@ Route::resource('especie', 'EspecieController')->middleware('especies:isAdmin,is
 Route::resource('venta', 'VentaController')->middleware('especies:isAdmin,isOperativo');
 
 Route::resource('cobrador', 'CobradorController')->middleware('especies:isAdmin,isOperativo');
+Route::resource('embargo', 'EmbargoController')->middleware('especies:isAdmin,isOperativo');
 // Route::get('especies/{especies}','EspecieController@show')->name('especies.show');
 
 //Route::resource('users', 'UsersController')->middleware('especies:isAdmin,isOperativo');

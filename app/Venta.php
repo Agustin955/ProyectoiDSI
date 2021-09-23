@@ -10,4 +10,8 @@ class Venta extends Model
         
         return $this->belongsTo(Especie::class);
     }
+    public function zona(){
+        
+        return $this->belongsTo(Zona::class);
+    }
 }

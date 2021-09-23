@@ -304,6 +304,11 @@ return [
             'url'  => 'zonas',
             'icon' => 'fas fa-suitcase',
         ],
+        [
+            'text'    => 'Embargos',
+            'url'  => 'embargo',
+            'icon' => 'fas fa-people-carry',
+        ],
         // ['header' => 'labels'],
         // [
         //     'text'       => 'important',
