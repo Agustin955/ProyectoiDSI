@@ -35,3 +35,5 @@ Route::resource('cobrador', 'CobradorController')->middleware('especies:isAdmin,
 // Route::resource('zonas', 'ZonasController', ['onlye' =>['index','create','edit','update','store'] ])->middleware('especies:isAdmin,isOperativo');
 Route::resource('zonas', 'ZonasController')->middleware('especies:isAdmin,isOperativo');
 Route::post('/actualizarzona', 'ZonasController@actualizarzona')->name('actualizarzona');
+
+Route::resource('inventarioZonas', 'InventarioZonaController')->middleware('especies:isAdmin,isOperativo');

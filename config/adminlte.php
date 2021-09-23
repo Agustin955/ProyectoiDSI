@@ -283,6 +283,12 @@ return [
             
         ],
         [
+            'text'    => 'Especies por zona',
+            'url'  => 'inventarioZonas',
+            'icon' => '_fa-solid fa-align-justify',
+            
+        ],        
+        [
             'text'    => 'Venta',
             'url'  => 'venta',
             'icon' => 'fa fa-dollar-sign',
