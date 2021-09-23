@@ -14,6 +14,7 @@
     </div>
     <div class="col-md-6">
         <a href="/venta/create" class="btn btn-primary btn-lg float-md-right" role="button" aria-pressed="true">Crear Nueva Venta</a>
+        
     </div>
 </div>
 

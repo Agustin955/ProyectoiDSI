@@ -38,3 +38,4 @@ Route::resource('zonas', 'ZonasController')->middleware('especies:isAdmin,isOper
 Route::post('/actualizarzona', 'ZonasController@actualizarzona')->name('actualizarzona');
 
 Route::resource('inventarioZonas', 'InventarioZonaController')->middleware('especies:isAdmin,isOperativo');
+
