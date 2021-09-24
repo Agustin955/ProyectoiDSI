@@ -115,15 +115,16 @@
             precio=$("#precio").val();
 
             
-
-            if(cantidad < stock ){
+            console.log(cantidad,stock)
+            console.log(parseInt(cantidad) < parseInt(stock))
+            if(parseInt(cantidad) < parseInt(stock)){
 
                 total=(cantidad*precio);
 
                 $("#total").val(total);
             }
             else{
-                
+                console.log(cantidad,stock)
                 alert('La cantidad a vender supera el stock')
                 limpiar();
 

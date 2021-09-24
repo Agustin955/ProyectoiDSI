@@ -16,10 +16,9 @@ class CreateInventarioZonasTable extends Migration
         Schema::create('inventario_zonas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('zona');
+            $table->integer('cantidad'); 
             $table->string('nombreEspecie');
-            $table->integer('cantidad');
-            $table->integer('estado')->default(1);
-            $table->foreignId('venta_id')->references('id')->on('ventas');
+                     
             $table->timestamps();
         });
     }
