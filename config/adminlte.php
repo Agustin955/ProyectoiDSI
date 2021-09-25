@@ -285,7 +285,7 @@ return [
         [
             'text'    => 'Especies por zona',
             'url'  => 'inventarioZonas',
-            'icon' => '_fa-solid fa-align-justify',
+            'icon' => 'fas fa-clipboard-list',
             
         ],        
         [

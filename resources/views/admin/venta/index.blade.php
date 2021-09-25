@@ -14,7 +14,7 @@
     </div>
     <div class="col-md-6">
         <a href="/venta/create" class="btn btn-primary btn-lg float-md-right" role="button" aria-pressed="true">Crear Nueva Venta</a>
-        
+
     </div>
 </div>
 
@@ -55,8 +55,9 @@
                 @endforeach
             </tbody>
         </table>
+        <div class="col-md-6">
+            <a href="{{route('descargarPDFVentas')}} " class="btn btn-primary btn-lg float-md-center" role="button" aria-pressed="true">Descargar reporte</a>
         </div>
-    </div>
 </div>
 </div>
 

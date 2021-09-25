@@ -39,3 +39,7 @@ Route::post('/actualizarzona', 'ZonasController@actualizarzona')->name('actualiz
 
 Route::resource('inventarioZonas', 'InventarioZonaController')->middleware('especies:isAdmin,isOperativo');
 
+Route::get('/pdf', 'PDFController@PDF')->name('descargarPDF');
+
+Route::get('/pdfVentas', 'PDFController@PDFVentas')->name('descargarPDFVentas');
+
