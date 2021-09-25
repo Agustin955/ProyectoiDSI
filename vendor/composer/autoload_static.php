@@ -533,6 +533,7 @@ class ComposerStaticInitb2662e8461f5ffae1193e6d6576b6eee
         'App\\Http\\Controllers\\EspecieController' => __DIR__ . '/../..' . '/app/Http/Controllers/EspecieController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\InventarioZonaController' => __DIR__ . '/../..' . '/app/Http/Controllers/InventarioZonaController.php',
+        'App\\Http\\Controllers\\PDFController' => __DIR__ . '/../..' . '/app/Http/Controllers/PDFController.php',
         'App\\Http\\Controllers\\RolesController' => __DIR__ . '/../..' . '/app/Http/Controllers/RolesController.php',
         'App\\Http\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/UsersController.php',
         'App\\Http\\Controllers\\VentaController' => __DIR__ . '/../..' . '/app/Http/Controllers/VentaController.php',

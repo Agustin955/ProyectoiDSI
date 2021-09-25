@@ -23,6 +23,7 @@ return array(
     'App\\Http\\Controllers\\EspecieController' => $baseDir . '/app/Http/Controllers/EspecieController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\InventarioZonaController' => $baseDir . '/app/Http/Controllers/InventarioZonaController.php',
+    'App\\Http\\Controllers\\PDFController' => $baseDir . '/app/Http/Controllers/PDFController.php',
     'App\\Http\\Controllers\\RolesController' => $baseDir . '/app/Http/Controllers/RolesController.php',
     'App\\Http\\Controllers\\UsersController' => $baseDir . '/app/Http/Controllers/UsersController.php',
     'App\\Http\\Controllers\\VentaController' => $baseDir . '/app/Http/Controllers/VentaController.php',

@@ -19,13 +19,24 @@
 @section('content')
     <div class="content">
         <div class="title m-b-md">
-            BIENVENIDO Al SISTEMA DE TESORERIA
+            <p class="normal">BIENVENIDO Al SISTEMA DE TESORERIA</p>
         </div>
     </div>
-    <p>Alcaldia de Soyapango </p>
+    <p class="normal">Alcaldia de Soyapango </p>
+
+    <p class="centrado">
+        <img src="imagenes/alcaldia.jpg" width="600px" height="600px"/>
+    </p>
+  
+  
 @stop
 
 @section('css')
+    <style>p.normal {font-size: 60px;text-align: center;}
+    p.centrado {
+  text-align: center;
+  
+}</style>
     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 

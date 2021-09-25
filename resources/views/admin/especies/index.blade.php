@@ -10,7 +10,7 @@
 
 <div class="row py-lg-2">
     <div class="col-md-6">
-        <h2>Lista de especies</h2>
+        <h2>Inventario de especies</h2>
     </div>
     <div class="col-md-6">
         <a href="/especie/create" class="btn btn-primary btn-lg float-md-right" role="button" aria-pressed="true">Crear nueva Especie</a>
