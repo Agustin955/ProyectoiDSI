@@ -38,7 +38,7 @@ Route::resource('zonas', 'ZonasController')->middleware('especies:isAdmin,isOper
 Route::post('/actualizarzona', 'ZonasController@actualizarzona')->name('actualizarzona');
 
 Route::resource('inventarioZonas', 'InventarioZonaController')->middleware('especies:isAdmin,isOperativo');
-
+Route::get('/zona/eliminar/{id}', 'ZonasController@eliminar')->name('eliminar_zona');
 Route::get('/pdf', 'PDFController@PDF')->name('descargarPDF');
 
 Route::get('/pdfVentas', 'PDFController@PDFVentas')->name('descargarPDFVentas');
