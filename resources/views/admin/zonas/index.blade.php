@@ -28,7 +28,7 @@
                        
                         <th>Nombre</th>
                         <th>Descripcion</th>
-                        {{--MP16001 <th>Agregar Ticket</th> --}}
+                        <th>Agregar Ticket</th>
                         <th>Ver Detalle</th>
                         <th>Editar</th>
                         <th>Eliminar</th>
@@ -43,9 +43,9 @@
                             
                             <td>{{$item->nombre}}</td>
                             <td>{{$item->descripcion}}</td>
-                            {{-- <td>
+                            <td>
                                 <a type="button" class="btn btn-primary" href="{{route('zonas.show',$item->id)}}">  <i class="fas fa-ticket-alt"></i> </a> 
-                            </td> --}}
+                            </td>
                             <td>
                                 <a type="button" class="btn btn-success" href="{{route('zonas.show',$item->id)}}">  <i class="fas fa-eye"></i> </a> 
                             </td>
@@ -53,7 +53,7 @@
                                 <a type="button" class="btn btn-warning" href="{{route('zonas.edit',$item->id)}}">  <i class="fas fa-edit"></i> </a> 
                             </td>
                             <td>
-                                <a type="button" class="btn btn-danger" href="{{route('eliminar_zona',$item->id)}}">  <i class="fas fa-trash"></i> </a> 
+                                <a type="button" class="btn btn-danger">  <i class="fas fa-trash"></i> </a> 
                             </td>
                            
                             

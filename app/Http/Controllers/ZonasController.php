@@ -54,12 +54,4 @@ class ZonasController extends Controller
 
         return view('admin.zonas.show',['zona' => $zona]);
     }
-
-    
-    function eliminar( $idZona)
-    {
-        $zona = Zona::find($idZona);
-        Zona::where('id', $idZona)->delete();
-        return redirect()->route('zonas.index');
-    }
  }
