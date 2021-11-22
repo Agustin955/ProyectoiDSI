@@ -20,6 +20,8 @@ class CreateCobradorsTable extends Migration
             $table->string('telefono');
             $table->string('fecha_nacimiento');
             $table->string('correo_electronico');
+            $table->string('dui');
+            $table->string('nit');
             $table->integer('estado')->default(1);
             $table->timestamps();
         });

@@ -44,7 +44,9 @@ class CobradorController extends Controller
             'cobrador_sexo' => 'required|max:300',
             'cobrador_telefono' => 'required|max:300',
             'cobrador_fecha' => 'required|max:300',
-            'cobrador_correo' => 'required|max:500'
+            'cobrador_correo' => 'required|max:500',
+            'cobrador_dui' => 'required|max:500',
+            'cobrador_nit' => 'required|max:500'
 
         ]);
 
@@ -55,6 +57,8 @@ class CobradorController extends Controller
         $cobrador->telefono = $request->cobrador_telefono;
         $cobrador->fecha_nacimiento = $request->cobrador_fecha;
         $cobrador->correo_electronico = $request->cobrador_correo;
+        $cobrador->dui = $request->cobrador_dui;
+        $cobrador->nit = $request->cobrador_nit;
 
         $cobrador-> save();
 
@@ -99,7 +103,9 @@ class CobradorController extends Controller
             'cobrador_sexo' => 'required|max:300',
             'cobrador_telefono' => 'required|max:300',
             'cobrador_fecha' => 'required|max:300',
-            'cobrador_correo' => 'required|max:500'
+            'cobrador_correo' => 'required|max:500',
+            'cobrador_dui' => 'required|max:500',
+            'cobrador_nit' => 'required|max:500'
 
         ]);
 
@@ -108,6 +114,8 @@ class CobradorController extends Controller
         $cobrador->telefono = $request->cobrador_telefono;
         $cobrador->fecha_nacimiento = $request->cobrador_fecha;
         $cobrador->correo_electronico = $request->cobrador_correo;
+        $cobrador->dui = $request->cobrador_dui;
+        $cobrador->nit = $request->cobrador_nit;
 
 
         $cobrador-> save();

@@ -20,29 +20,29 @@
 <br>
  
     <div class="card">
-        <div class="card-header">
-    
-            <table class= "table table-striped" id="usuarios">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+       </div>
+       <div class="card-body">
+        <div class="table-responsive">
+            <table class= "table table-bordered" id="usuarios" width="100%" cellspacing="0">
                 <thead>
-                    
+                <tr>
                        
                         <th>Nombre</th>
                         <th>Descripcion</th>
                         <th>Agregar Ticket</th>
-                        <th>Ver Detalle</th>
-                        <th>Editar</th>
-                        <th>Eliminar</th>
+                        <th colspan="3"><center>Herramientas</center></th>
                        
-                   
+</tr>
                 </thead>
 
                 <tbody>
 
                     @foreach($zonas as $item)
                         <tr>
-                            
-                            <td>{{$item->nombre}}</td>
-                            <td>{{$item->descripcion}}</td>
+                            <th>{{$item->nombre}}</th>
+                            <th>{{$item->descripcion}}</th>
                             <td>
                                 <a type="button" class="btn btn-primary" href="{{route('zonas.show',$item->id)}}">  <i class="fas fa-ticket-alt"></i> </a> 
                             </td>
@@ -55,15 +55,12 @@
                             <td>
                                 <a type="button" class="btn btn-danger">  <i class="fas fa-trash"></i> </a> 
                             </td>
-                           
-                            
-
-                            
-                           
                         </tr>
                     @endforeach
                 </tbody>  
             </table>
+            <div>
+        <div>
         </div>
 @endsection     
 
@@ -72,6 +69,28 @@
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>   
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
     <script>
-     $('#usuarios').DataTable();
+     $('#usuarios').DataTable({
+    language: {
+        "decimal": "",
+        "emptyTable": "No hay información",
+        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+        "infoPostFix": "",
+        "thousands": ",",
+        "lengthMenu": "Mostrar _MENU_ Entradas",
+        "loadingRecords": "Cargando...",
+        "processing": "Procesando...",
+        "search": "Buscar:",
+        "zeroRecords": "Sin resultados encontrados",
+        "paginate": {
+            "first": "Primero",
+            "last": "Ultimo",
+            "next": "Siguiente",
+            "previous": "Anterior"
+        }
+    },
+
+});
     </script>
 @endsection

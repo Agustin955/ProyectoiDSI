@@ -45,6 +45,14 @@
         <label for="exampleInputEmail1">Correo Electrónico</label>
         <input type="email" name="cobrador_correo" class="form-control" id="cobrador_correo" placeholder="Correo Electrónico..." value="{{ old('cobrador_correo') }}" required>
     </div>
+    <div class="form-group">
+        <label for="dui">DUI</label>
+        <input data-inputmask='"mask": "99999999-9"' data-mask text="text" name="cobrador_dui" class="form-control" id="cobrador_dui" placeholder="DUI..." value="{{ old('cobrador_dui') }}" required>
+    </div>
+    <div class="form-group">
+        <label for="nit">NIT</label>
+        <input data-inputmask='"mask": "9999-999999-999-9"' data-mask text="text" name="cobrador_nit" class="form-control" id="cobrador_nit" placeholder="NIT..." value="{{ old('cobrador_nit') }}" required>
+    </div>
     <div class="form-group pt-2">
         <input class="btn btn-primary" type="submit" value="Guardar">
     </div>
