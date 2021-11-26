@@ -43,3 +43,6 @@ Route::get('/pdf', 'PDFController@PDF')->name('descargarPDF');
 
 Route::get('/pdfVentas', 'PDFController@PDFVentas')->name('descargarPDFVentas');
 
+Route::resource('cuenta', 'CuentaController')->middleware('especies:isAdmin,isOperativo');
+
+Route::resource('cheque', 'ChequeController')->middleware('especies:isAdmin,isOperativo');

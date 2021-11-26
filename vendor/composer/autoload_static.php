@@ -516,8 +516,10 @@ class ComposerStaticInitb2662e8461f5ffae1193e6d6576b6eee
     );
 
     public static $classMap = array (
+        'App\\Cheque' => __DIR__ . '/../..' . '/app/Cheque.php',
         'App\\Cobrador' => __DIR__ . '/../..' . '/app/Cobrador.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Cuenta' => __DIR__ . '/../..' . '/app/Cuenta.php',
         'App\\Embargo' => __DIR__ . '/../..' . '/app/Embargo.php',
         'App\\Especie' => __DIR__ . '/../..' . '/app/Especie.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -529,6 +531,7 @@ class ComposerStaticInitb2662e8461f5ffae1193e6d6576b6eee
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\CobradorController' => __DIR__ . '/../..' . '/app/Http/Controllers/CobradorController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\CuentaController' => __DIR__ . '/../..' . '/app/Http/Controllers/CuentaController.php',
         'App\\Http\\Controllers\\EmbargoController' => __DIR__ . '/../..' . '/app/Http/Controllers/EmbargoController.php',
         'App\\Http\\Controllers\\EspecieController' => __DIR__ . '/../..' . '/app/Http/Controllers/EspecieController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
