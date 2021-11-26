@@ -31,7 +31,7 @@
                        
                         <th>Nombre</th>
                         <th>Descripcion</th>
-                        <th>Agregar Ticket</th>
+                       
                         <th colspan="3"><center>Herramientas</center></th>
                        
 </tr>
@@ -43,18 +43,18 @@
                         <tr>
                             <th>{{$item->nombre}}</th>
                             <th>{{$item->descripcion}}</th>
-                            <td>
-                                <a type="button" class="btn btn-primary" href="{{route('zonas.show',$item->id)}}">  <i class="fas fa-ticket-alt"></i> </a> 
-                            </td>
+                            
                             <td>
                                 <a type="button" class="btn btn-success" href="{{route('zonas.show',$item->id)}}">  <i class="fas fa-eye"></i> </a> 
                             </td>
                             <td>
                                 <a type="button" class="btn btn-warning" href="{{route('zonas.edit',$item->id)}}">  <i class="fas fa-edit"></i> </a> 
                             </td>
-                            <td>
-                                <a type="button" class="btn btn-danger">  <i class="fas fa-trash"></i> </a> 
-                            </td>
+                            <td><form action="{{'zonas/'.$item->id}}" method="post"> 
+                                @csrf
+                                {{ method_field('DELETE') }}
+                                <button  type="submit" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('¿BORRAR?')"></button>
+                            </form>  </td> 
                         </tr>
                     @endforeach
                 </tbody>  

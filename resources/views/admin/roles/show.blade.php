@@ -7,7 +7,7 @@
 <div class="container">       
     <div class="card">
         <div class="card-header">
-            <h3>Name: {{$role['name']}}</h3>  
+            <h3>Nombre: {{$role['name']}}</h3>  
             <h4>Slug: {{$role['slug']}}</h4>
         </div>
         <div class="card-body">

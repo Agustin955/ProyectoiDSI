@@ -84,7 +84,7 @@
 
 
     <div class="form-group pt-2">
-        <input class="btn btn-primary" type="submit" value="Submit">
+        <input class="btn btn-primary" type="submit" value="Guardar">
     </div>
 </form>
 
