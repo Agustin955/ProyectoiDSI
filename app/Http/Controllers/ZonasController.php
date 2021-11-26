@@ -10,7 +10,7 @@ class ZonasController extends Controller
 {
     public function index()
     {
-        $zonas = Zona::all();
+        $zonas = Zona::orderBy('id', 'desc')->where('estado',1)->get();
         return view('admin.zonas.index',['zonas' => $zonas]);
     }
 
@@ -53,5 +53,11 @@ class ZonasController extends Controller
       
 
         return view('admin.zonas.show',['zona' => $zona]);
+    }
+
+    public function destroy(Zona $zona)
+    {
+        Zona::where('id', '=' ,$zona->id)->update(['estado' => 0]);
+        return redirect()->route('zonas.index');
     }
  }

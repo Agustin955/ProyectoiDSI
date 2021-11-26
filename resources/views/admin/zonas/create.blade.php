@@ -17,16 +17,24 @@
 
 <br>
 <form action="{{route('zonas.store')}}" method="POST">
-    @csrf
+{{ csrf_field() }}
     <div class="form-group">
       <label for="exampleInputEmail1">Nombre</label>
-      <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp" placeholder="Ingrese Nombre" required>
-      
+      <input type="text" class="form-control  @error('especie_costo') is-invalid @enderror" id="nombre" name="nombre" aria-describedby="emailHelp" placeholder="Ingrese Nombre" required>
+      @error('nombre')
+            <span class="invalid-feedback d-block" role="alert">
+                <Strong>{{$message}}</Strong>
+            </span>
+        @enderror
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Descripcion</label>
-     <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Agregar Descripcion" class="form-control"></textarea>
-    
+     <textarea name="descripcion" id="descripcion  " cols="30" rows="10" placeholder="Agregar Descripcion" class="form-control @error('especie_costo') is-invalid @enderror" required></textarea>
+     @error('descripcion')
+            <span class="invalid-feedback d-block" role="alert">
+                <Strong>{{$message}}</Strong>
+            </span>
+        @enderror
     </div>
    
     <button type="submit" class="btn btn-primary">Guardar </button>
