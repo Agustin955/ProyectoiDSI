@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h2>Edit Especie</h2>
+<h2>Editar Especie</h2>
  
 <form method="POST" action="/especie/{{ $especie->id }}" >
     
@@ -59,7 +59,7 @@
     </div>
 
     <div class="form-group pt-2">
-        <input class="btn btn-primary" type="submit" value="Submit">
+        <input class="btn btn-primary" type="submit" value="Guardar">
     </div>
 </form>
 

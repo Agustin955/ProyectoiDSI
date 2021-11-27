@@ -309,6 +309,20 @@ return [
             'url'  => 'embargo',
             'icon' => 'fas fa-people-carry',
         ],
+
+        ['header' => 'REGISTROS BANCARIOS'],
+        [
+            'text'    => 'Cuentas bancarias',
+            'url'  => 'cuenta',
+            'icon' => 'fa fa-book-open',
+            
+        ],
+        [
+            'text'    => 'Cheques',
+            'url'  => 'cheque',
+            'icon' => 'fas fa-clipboard-list',
+            
+        ],        
         // ['header' => 'labels'],
         // [
         //     'text'       => 'important',

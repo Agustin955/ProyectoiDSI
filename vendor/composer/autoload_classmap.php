@@ -6,8 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Cheque' => $baseDir . '/app/Cheque.php',
     'App\\Cobrador' => $baseDir . '/app/Cobrador.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Cuenta' => $baseDir . '/app/Cuenta.php',
     'App\\Embargo' => $baseDir . '/app/Embargo.php',
     'App\\Especie' => $baseDir . '/app/Especie.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
@@ -19,6 +21,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
     'App\\Http\\Controllers\\CobradorController' => $baseDir . '/app/Http/Controllers/CobradorController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\CuentaController' => $baseDir . '/app/Http/Controllers/CuentaController.php',
     'App\\Http\\Controllers\\EmbargoController' => $baseDir . '/app/Http/Controllers/EmbargoController.php',
     'App\\Http\\Controllers\\EspecieController' => $baseDir . '/app/Http/Controllers/EspecieController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',

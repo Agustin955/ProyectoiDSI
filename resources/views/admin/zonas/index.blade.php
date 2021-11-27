@@ -31,7 +31,7 @@
                        
                         <th>Nombre</th>
                         <th>Descripcion</th>
-                        <th>Agregar Ticket</th>
+                       
                         <th colspan="3"><center>Herramientas</center></th>
                        
 </tr>
@@ -43,9 +43,7 @@
                         <tr>
                             <th>{{$item->nombre}}</th>
                             <th>{{$item->descripcion}}</th>
-                            <td>
-                                <a type="button" class="btn btn-primary" href="{{route('zonas.show',$item->id)}}">  <i class="fas fa-ticket-alt"></i> </a> 
-                            </td>
+                            
                             <td>
                                 <a type="button" class="btn btn-success" href="{{route('zonas.show',$item->id)}}">  <i class="fas fa-eye"></i> </a> 
                             </td>
