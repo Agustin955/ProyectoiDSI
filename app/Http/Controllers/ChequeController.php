@@ -60,7 +60,7 @@ class ChequeController extends Controller
 
         $cheque-> save();          
 
-        return redirect('/cheques');
+        return redirect('/cheque');
     }
 
     /**

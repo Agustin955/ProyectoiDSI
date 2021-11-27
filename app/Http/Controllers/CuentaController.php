@@ -58,7 +58,7 @@ class CuentaController extends Controller
 
         $cuenta-> save();          
 
-        return redirect('/cuentas');
+        return redirect('/cuenta');
     
     }
 

@@ -314,13 +314,13 @@ return [
         [
             'text'    => 'Cuentas bancarias',
             'url'  => 'cuenta',
-            'icon' => 'fa fa-book-open',
+            'icon' => 'fas fa-file-invoice-dollar',
             
         ],
         [
             'text'    => 'Cheques',
             'url'  => 'cheque',
-            'icon' => 'fas fa-clipboard-list',
+            'icon' => 'fas fa-money-check-alt',
             
         ],        
         // ['header' => 'labels'],

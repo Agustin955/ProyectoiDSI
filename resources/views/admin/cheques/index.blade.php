@@ -13,7 +13,7 @@
         <h2>Cheques</h2>
     </div>
     <div class="col-md-6">
-        <a href="/cheques/create" class="btn btn-primary btn-lg float-md-right" role="button" aria-pressed="true">Generar nuevo cheque</a>
+        <a href="/cheque/create" class="btn btn-primary btn-lg float-md-right" role="button" aria-pressed="true">Generar nuevo cheque</a>
     </div>
 </div>
 

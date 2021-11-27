@@ -13,7 +13,7 @@
         <h2>Cuentas bancarias</h2>
     </div>
     <div class="col-md-6">
-        <a href="/cuentas/create" class="btn btn-primary btn-lg float-md-right" role="button" aria-pressed="true">Crear nueva cuenta</a>
+        <a href="/cuenta/create" class="btn btn-primary btn-lg float-md-right" role="button" aria-pressed="true">Crear nueva cuenta</a>
     </div>
 </div>
 

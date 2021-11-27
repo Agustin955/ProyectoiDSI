@@ -10,7 +10,7 @@
 
 
  
-<form method="POST" action="/cuentas" enctype="multipart/form-data">
+<form method="POST" action="/cuenta" enctype="multipart/form-data">
     {{ csrf_field() }}
 
     <div class="form-group">
