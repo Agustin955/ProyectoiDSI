@@ -25,8 +25,7 @@
                         <th>Zona</th>
                         <th>Nombre de Especie</th>
                         <th>Cantidad</th>
-                        <th>Cantidad por 5</th>
-                        <th>Cantidad por IVA</th>
+                      
                     </tr>
                 </thead>
 
@@ -38,8 +37,7 @@
                             <th>{{$inventarioZona->zona}}</th>
                             <th>{{$inventarioZona->nombreEspecie}}</th>
                             <th>{{$inventarioZona->cantidad}}</th>  
-                            <th>{{$inventarioZona->cantidad * 5}} </th> 
-                            <th>{{$inventarioZona->cantidad * 1.13}} </th>             
+                                      
                                 
                             
                         </tr>
