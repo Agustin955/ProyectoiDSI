@@ -15,7 +15,7 @@
 
     <div class="form-group">
         <label for="role">Banco</label>
-        <select class="role form-control" name="cheque_banco" id="cheque_banco">
+        <select class="role form-control" name="cheque_banco" id="cheque_banco" onchange="ShowSelected();">
             <option value="">Seleccione...</option>
             <option value="Bancoagrícola">Bancoagrícola</option>
             <option value="BAC">BAC</option>
@@ -23,10 +23,20 @@
             <option value="Promerica">Promerica</option>
         </select>
     </div>
+    
     <div class="form-group">
         <label for="role">N° Cuenta</label>
-        <input type="text" name="cheque_ncuenta" class="form-control" id="cheque_ncuenta" placeholder="N° de cuenta..." value="{{ old('cheque_ncuenta') }}" required>
+    
+        <select class="role form-control" name="cheque_ncuenta" id="ncuenta" >
+            <option value="">Seleccione...</option>
+           
+        </select>
+        
+        
+        
     </div>
+    
+    
     <div class="form-group">
         <label for="recibe">Paguese a la orden de</label>
         <input type="text" name="cheque_recibe" class="form-control" id="cheque_recibe" placeholder="Nombre completo..." value="{{ old('cheque_recibe') }}" required>
@@ -53,13 +63,58 @@
 
 
 @section('js')
-<script>
 
-    $(document).ready(function(){
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+        console.log("estoy dentro")
+        $('#cheque_banco').on('change', function() {
+            console.log("estoy mas dentro")
+            var seleccion = $(this).val();
+            $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    });
+                    $.ajax({
+                        type: 'POST',
+                        url: '/banco',
+                        data: {
+                            "nombre_banco": seleccion
+                        },
+                        success: function(equipments) {
+                            console.log(equipments)
+                            console.log('en peticion');
+                            $('#ncuenta').empty();
+                            $('#ncuenta').append("<option value=''>Seleccione</option>");
+                            $.each(equipments, function(index, value) {
+                                $('#ncuenta').append("<option value='" + index + "'>" + value + "</option>")
+                            })
+                        }
+
+             });
+
+        });
 
     });
+    
+    function ShowSelected()
+    {
+    /* Para obtener el valor */
+    var cod = document.getElementById("cheque_banco").value;
+    //alert(cod);
+    
+    /* Para obtener el texto */
+    var combo = document.getElementById("cheque_banco");
+    var selected = combo.options[combo.selectedIndex].text;
+    //alert(selected);
+    }
+    </script>
 
-</script>
+    
+
+
+
 @endsection
 
 @endsection

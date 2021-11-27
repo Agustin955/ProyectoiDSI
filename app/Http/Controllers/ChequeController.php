@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Cheque;
+use App\Cuenta;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,7 @@ class ChequeController extends Controller
      */
     public function index()
     {
-        $cheque = Cheque::orderBy('id', 'desc');
+        $cheque = Cheque::orderBy('id', 'desc')->get();
         return view('admin.cheques.index', ['cheque' => $cheque]);
     }
 
@@ -26,6 +27,22 @@ class ChequeController extends Controller
      */
     public function create()
     {
+        return view('admin.cheques.create');
+    }
+
+    public function getCuentasBancarias(Request $request)
+    {   
+        $banco=$request->nombre_banco;
+        $result=Cuenta::where('banco',$banco)->get();
+        
+            $cuentasArray = array();
+ 
+            foreach($result as $cuenta){
+                $cuentasArray[$cuenta->id] = $cuenta->ncuenta;
+            }
+ 
+            return response()->json($cuentasArray);
+         
         return view('admin.cheques.create');
     }
 
@@ -58,8 +75,12 @@ class ChequeController extends Controller
         $cheque->fecha = $request->cheque_fecha;
  
 
-        $cheque-> save();          
-
+        $cheque-> save();
+        
+        $cuenta=Cuenta::find($request->cheque_ncuenta);
+        
+        $cuenta->saldo=$cuenta->saldo- floatval($request->cheque_cantidad);
+        $cuenta->update();
         return redirect('/cheque');
     }
 

@@ -41,7 +41,7 @@
                         <tr>
                             
                             <th>{{$cheque->banco}}</th>
-                            <th>{{$chequec->ncuenta}}</th>
+                            <th>{{$cheque->ncuenta}}</th>
                             <th>{{$cheque->recibe}}</th>
                             <th>{{$cheque->cantidad}}</th>
                             <th>{{$cheque->cantidadletras}}</th>   

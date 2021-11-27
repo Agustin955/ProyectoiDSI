@@ -15,7 +15,7 @@ class CuentaController extends Controller
      */
     public function index()
     {
-        $cuenta = Cuenta::orderBy('id', 'desc');
+        $cuenta = Cuenta::orderBy('id', 'desc')->get();
         return view('admin.cuentas.index', ['cuenta' => $cuenta]);
     }
 
