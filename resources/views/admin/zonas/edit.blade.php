@@ -17,17 +17,25 @@
 
 <br>
 <form action="{{route('actualizarzona')}}" method="POST">
-    @csrf
+{{ csrf_field() }}
     <input type="hidden"  name="id" value="{{$zona->id}}">
     <div class="form-group">
       <label for="exampleInputEmail1">Nombre  id:{{$zona->id}}</label>
-      <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp" placeholder="Ingrese Nombre" value="{{$zona->nombre}}" required>
-      
+      <input type="text" class="form-control  @error('especie_costo') is-invalid @enderror" id="nombre" name="nombre" aria-describedby="emailHelp" placeholder="Ingrese Nombre" value="{{$zona->nombre}}" required>
+      @error('nombre')
+            <span class="invalid-feedback d-block" role="alert">
+                <Strong>{{$message}}</Strong>
+            </span>
+        @enderror
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Descripcion</label>
-     <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Agregar Descripcion" class="form-control">{{$zona->descripcion}}</textarea>
-    
+     <textarea name="descripcion" id="descripcion " cols="30" rows="10" placeholder="Agregar Descripcion" class="form-control  @error('especie_costo') is-invalid @enderror" required>{{$zona->descripcion}}</textarea>
+     @error('descripcion')
+            <span class="invalid-feedback d-block" role="alert">
+                <Strong>{{$message}}</Strong>
+            </span>
+        @enderror
     </div>
    
     <button type="submit" class="btn btn-primary">Guardar Cambios</button>

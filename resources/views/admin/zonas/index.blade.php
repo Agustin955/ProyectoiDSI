@@ -50,11 +50,14 @@
                             <td>
                                 <a type="button" class="btn btn-warning" href="{{route('zonas.edit',$item->id)}}">  <i class="fas fa-edit"></i> </a> 
                             </td>
-                            <td><form action="{{'zonas/'.$item->id}}" method="post"> 
-                                @csrf
-                                {{ method_field('DELETE') }}
-                                <button  type="submit" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('¿BORRAR?')"></button>
-                            </form>  </td> 
+                            <td>
+                            <form action="{{route('zonas.destroy',$item->id)}}" method="post"> 
+                                    @csrf
+                                    {{ method_field('DELETE') }}
+                                    <button  type="submit" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('¿BORRAR?')"></button>
+                                </form> 
+                               
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>  
