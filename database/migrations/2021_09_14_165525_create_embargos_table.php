@@ -16,7 +16,7 @@ class CreateEmbargosTable extends Migration
         Schema::create('embargos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nombre');
-            $table->double('montoDescontar');
+            $table->integer('montoDescontar');
             $table->string('referencia');
             $table->string('estadoEmbargo');
             $table->integer('estado')->default(1);

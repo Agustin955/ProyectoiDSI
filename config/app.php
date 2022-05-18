@@ -163,7 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
 
-        
+        Yajra\Oci8\Oci8ServiceProvider::Class,
 
         /*
          * Package Service Providers...

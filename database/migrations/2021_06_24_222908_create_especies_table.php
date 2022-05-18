@@ -16,8 +16,8 @@ class CreateEspeciesTable extends Migration
         Schema::create('especies', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nombre');
-            $table->double('costo');
-            $table->double('valorVenta');
+            $table->integer('costos');
+            $table->integer('valorVenta');
             $table->integer('numeracionInicial');
             $table->integer('numeracionFinal');
             $table->integer('cantidad');

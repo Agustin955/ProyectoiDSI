@@ -16,10 +16,10 @@ class CreateVentasTable extends Migration
         Schema::create('ventas', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('especie_id')->references('id')->on('especies');
-            $table->foreignId('zona_id')->references('id')->on('zonas');
+            //$table->foreignId('especie_id')->references('id')->on('especies');
+           // $table->foreignId('zona_id')->references('id')->on('zonas');
             $table->integer('cantidad');
-            $table->double('total');
+            $table->integer('total');
             $table->timestamps();
         });
     }

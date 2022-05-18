@@ -18,7 +18,7 @@ class CreateChequesTable extends Migration
             $table->string('banco');
             $table->string('ncuenta');
             $table->string('recibe');
-            $table->double('cantidad');
+            $table->integer('cantidad');
             $table->string('cantidadletras');                       
             $table->string('fecha');
             $table->timestamps();

@@ -18,7 +18,7 @@ class CreateCuentasTable extends Migration
             $table->string('banco');
             $table->string('ncuenta');
             $table->string('nombre');
-            $table->double('saldo');
+            $table->integer('saldo');
             $table->string('estado');
 
             $table->timestamps();
